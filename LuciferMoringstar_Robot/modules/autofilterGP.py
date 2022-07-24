@@ -78,6 +78,9 @@ async def group_filters(client, update):
         else:
             buttons = btn
             buttons.append([InlineKeyboardButton("📃 Pages 1/1",callback_data="pages"),
+                            InlineKeyboardButton("Close 🗑️", callback_data="close")])
+
+            buttons.append([InlineKeyboardButton("🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}?")])
 
             try:             
                 if settings["photo"]:
