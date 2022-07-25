@@ -65,9 +65,6 @@ async def cb_handler(bot, update):
                      InlineKeyboardButton(f"📃 {int(index)+2}/{data['total']}", callback_data="pages"),
                      InlineKeyboardButton("🗑️", callback_data="close")]
                 )
-                buttons.append(
-                    [InlineKeyboardButton(text="🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}")]
-                )
                 await update.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
@@ -79,9 +76,6 @@ async def cb_handler(bot, update):
                      InlineKeyboardButton(f"📃 {int(index)+2}/{data['total']}", callback_data="pages"),
                      InlineKeyboardButton("🗑️", callback_data="close"),
                      InlineKeyboardButton("➡", callback_data=f"nextgroup_{int(index)+1}_{keyword}")]
-                )
-                buttons.append(
-                    [InlineKeyboardButton(text="🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}")]
                 )
                 await update.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(buttons))                
                 return
@@ -100,9 +94,6 @@ async def cb_handler(bot, update):
                      InlineKeyboardButton("🗑️", callback_data="close"),
                      InlineKeyboardButton("➡", callback_data=f"nextgroup_{int(index)-1}_{keyword}")]
                 )
-                buttons.append(
-                    [InlineKeyboardButton(text="🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}")]
-                )
                 await update.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(buttons))                
                 return   
             else:
@@ -112,9 +103,6 @@ async def cb_handler(bot, update):
                      InlineKeyboardButton(f"📃 {int(index)}/{data['total']}", callback_data="pages"),
                      InlineKeyboardButton("🗑️", callback_data="close"),
                      InlineKeyboardButton("➡", callback_data=f"nextgroup_{int(index)-1}_{keyword}")]
-                )
-                buttons.append(
-                    [InlineKeyboardButton(text="🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}")]
                 )
                 await update.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(buttons))                
                 return
