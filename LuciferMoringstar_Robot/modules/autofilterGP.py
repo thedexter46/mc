@@ -80,8 +80,6 @@ async def group_filters(client, update):
             buttons.append([InlineKeyboardButton("📃 Pages 1/1",callback_data="pages"),
                             InlineKeyboardButton("Close 🗑️", callback_data="close")])
 
-            buttons.append([InlineKeyboardButton("🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}?")])
-
             try:             
                 if settings["photo"]:
                     try:
@@ -113,8 +111,6 @@ async def group_filters(client, update):
         buttons.append([InlineKeyboardButton(f"📃 1/{data['total']}",callback_data="pages"),
                         InlineKeyboardButton("🗑️", callback_data="close"),
                         InlineKeyboardButton("➡",callback_data=f"nextgroup_0_{keyword}")])
-
-        buttons.append([InlineKeyboardButton("🤖 𝙲𝙷𝙴𝙲𝙺 𝙼𝚈 𝙿𝙼 🤖", url=f"https://telegram.dog/{temp.Bot_Username}")])
 
         try:             
             if settings["photo"]:
