@@ -240,7 +240,7 @@ async def cb_handler(bot, update):
                     try:
                         invite_link = await bot.create_chat_invite_link(GET_FILECHANNEL)      
                         dlFile = await bot.send_cached_media(chat_id=GET_FILECHANNEL, file_id=file_id, caption=caption, reply_markup=InlineKeyboardMarkup(buttons))
-                        dlReply = await update.message.reply_text(GETFILE_TEXT.format(mention=update.from_user.mention, file_name=title, file_size=size), reply_markup=InlineKeyboardMarkup( [[ InlineKeyboardButton("📥 🅳︎🅾︎🆆︎🅽︎🅻︎🅾︎🅰︎🅳︎ 📥", url=dlFile.link) ],[ InlineKeyboardButton("⚠️𝙲𝙾𝙽'𝚃 𝙰𝙲𝙲𝙴𝚂𝚂 𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴⚠️", url=invite_link.invite_link) ]] ))
+                        dlReply = await update.message.reply_text(GETFILE_TEXT.format(mention=update.from_user.mention, file_name=title, file_size=size), reply_markup=InlineKeyboardMarkup( [[ InlineKeyboardButton("📥 Download Link 📥", url=dlFile.link) ],[ InlineKeyboardButton("⚠️ Can't Access ❓ Click Here⚠️", url=invite_link.invite_link) ]] ))
                         await asyncio.sleep(1000)
                         await dlFile.delete()
                         await dlReply.delete()
